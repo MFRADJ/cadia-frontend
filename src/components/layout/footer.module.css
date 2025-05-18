@@ -1,0 +1,161 @@
+.footer {
+    width: 100%;
+    background-color: var(--background-secondary);
+    padding: 80px 0 30px;
+}
+
+.footerContainer {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLogo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.logoDescription {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 12px;
+}
+
+.socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--background-primary);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.socialIcon:hover {
+    background-color: var(--accent);
+    color: var(--background-primary);
+}
+
+.linksColumn h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+}
+
+.linksColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksColumn li {
+    margin-bottom: 12px;
+}
+
+.linksColumn a {
+    color: var(--text-secondary);
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+}
+
+.linksColumn a:hover {
+    color: var(--text-primary);
+}
+
+.linksColumn a:hover:after {
+    width: 100%;
+}
+
+.linksColumn a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.footerBottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Media queries pour assurer la responsivité */
+@media (max-width: 992px) {
+    .footerGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logoSection {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .logoSection {
+        grid-column: span 1;
+    }
+
+    .socialIcons {
+        justify-content: center;
+    }
+
+    .linksColumn h3 {
+        margin-bottom: 15px;
+    }
+
+    .linksColumn {
+        text-align: center;
+    }
+
+    .footerLogo {
+        text-align: center;
+    }
+
+    .logoDescription {
+        text-align: center;
+    }
+}

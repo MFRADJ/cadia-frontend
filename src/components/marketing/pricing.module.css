@@ -1,0 +1,158 @@
+.pricingSection {
+    width: 100%;
+    background-color: var(--background-primary);
+    padding: 80px 0;
+}
+
+.pricingContainer {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-primary);
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.pricingCard {
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.popular {
+    border: 2px solid var(--accent);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.popularBadge {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    background-color: var(--accent);
+    color: var(--background-primary);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.pricingCard:hover {
+    transform: translateY(-10px);
+}
+
+.popular:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.planTitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.planPrice {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.planDescription {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.featuresList {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.featureItem:before {
+    content: "✓";
+    color: var(--accent);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.buttonContainer {
+    margin-top: auto;
+}
+
+/* Media queries pour assurer la responsivité */
+@media (max-width: 992px) {
+    .pricingGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricingSection {
+        padding: 60px 0;
+    }
+
+    .sectionTitle {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .popular {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricingCard {
+        padding: 25px;
+    }
+
+    .popular {
+        transform: scale(1);
+        margin: 10px 0;
+    }
+
+    .popular:hover {
+        transform: translateY(-10px) scale(1);
+    }
+
+    .planTitle {
+        font-size: 20px;
+    }
+}
