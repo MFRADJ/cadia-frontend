@@ -159,10 +159,10 @@ export default function Header() {
 
                 {/* Auth buttons */}
                 <div className={styles.authButtons}>
-                    <Link href="/auth/login" className={styles.loginLink}>
+                    <Link href="/login" className={styles.loginLink}>
                         Log in
                     </Link>
-                    <Link href="/auth/signup">
+                    <Link href="/signup">
                         <Button
                             variant="primary"
                             size="small"
@@ -223,10 +223,10 @@ export default function Header() {
                         Documentation
                     </Link>
                     <div className={styles.mobileAuthButtons}>
-                        <Link href="/auth/login" className={styles.mobileLoginLink}>
+                        <Link href="/login" className={styles.mobileLoginLink}>
                             Log in
                         </Link>
-                        <Link href="/auth/signup" className={styles.mobileSignupLink}>
+                        <Link href="/signup" className={styles.mobileSignupLink}>
                             Sign up free
                         </Link>
                     </div>
