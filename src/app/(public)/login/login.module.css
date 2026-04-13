@@ -1,0 +1,321 @@
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9fc;
+}
+
+.loginCard {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.formSide {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.logoLink {
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.logo {
+    height: auto;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    /* Couleur gris foncé au lieu de bleu */
+    color: #333333;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #6E6E80;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 32px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4A4A68;
+}
+
+.forgotPassword {
+    font-size: 14px;
+    color: #6E6E80;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgotPassword:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.input {
+    padding: 14px 16px;
+    background-color: #ffffff;
+    border: 1px solid #E4E4ED;
+    border-radius: 12px;
+    color: #333333;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    /* Couleur d'accent grise au lieu de bleue */
+    border-color: #727272;
+    box-shadow: 0 0 0 3px rgba(114, 114, 114, 0.1);
+}
+
+.input::placeholder {
+    color: #ACACB9;
+}
+
+.passwordContainer {
+    position: relative;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6E6E80;
+    cursor: pointer;
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    /* Couleur d'accent grise au lieu de bleue */
+    accent-color: #727272;
+}
+
+.checkboxLabel {
+    font-size: 14px;
+    color: #6E6E80;
+}
+
+.submitButton {
+    margin-top: 12px;
+    padding: 14px;
+    /* Couleur de bouton grise au lieu de bleue */
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    background-color: #444444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    color: #6E6E80;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #E4E4ED;
+}
+
+.divider span {
+    padding: 0 16px;
+}
+
+.socialLogins {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.socialButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    background-color: #ffffff;
+    border: 1px solid #E4E4ED;
+    border-radius: 12px;
+    color: #4A4A68;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.socialButton:hover {
+    background-color: #F7F7FB;
+}
+
+.signupPrompt {
+    margin-top: auto;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #6E6E80;
+}
+
+.textLink {
+    /* Couleur de lien grise au lieu de bleue */
+    color: #333333;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.textLink:hover {
+    opacity: 0.7;
+}
+
+/* Partie image avec un fond plus neutre */
+.imageSide {
+    flex: 1;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.88), rgba(51, 51, 51, 0.72));
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: none;
+}
+
+.overlayContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.5));
+}
+
+.overlayTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.overlayText {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 360px;
+}
+
+.featureList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .imageSide {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .loginCard {
+        min-height: auto;
+    }
+
+    .formSide {
+        padding: 32px 24px;
+    }
+
+    .socialLogins {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .form {
+        gap: 20px;
+    }
+}
+/* Ajoutez à votre fichier login.module.css si ce n'est pas déjà fait */
+.errorMessage {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 1px solid #f87171;
+}
